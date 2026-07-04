@@ -1,0 +1,230 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #fef3f0 0%, #ffe8dc 25%, #fff5f0 50%, #f0f4ff 75%, #e8f1ff 100%);
+  color: #171717;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+/* Footer Styles */
+.footer {
+  padding: 4rem 0 2rem;
+  background: #585050;
+  color: #f4f0ed;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-col a,
+.footer-col p {
+  display: block;
+  color: #f4f0ed;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: #ff5d2d;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+
+@font-face {
+  font-family: 'buttons';
+  src: url('fonts/LTSoul-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'title';
+  src: url('fonts/Pianaforma.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Banner Section */
+.banner {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 245, 0.95) 100%);
+  padding: 4rem 2rem;
+  padding-top: 76px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(211, 27, 13, 0.12);
+  border-radius: 1rem;
+  margin: 2rem auto;
+  animation: fadeIn 1s ease-in-out;
+  border: 1px solid rgba(211, 27, 13, 0.1);
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0414c4; /* Red color for the header */
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section__header::after {
+  content: ""; /* Adds a decorative underline */
+  display: block;
+  width: 50%; /* Adjusts the width of the underline */
+  height: 3px; /* Thickness of the underline */
+  background-color: #fe25a4; /* Green color for the underline */
+  margin: 0.5rem auto 0; /* Centers the underline and adds spacing */
+}
+
+/* Image Collection Grid */
+
+.banner__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  animation: slideUp 1s ease-in-out;
+}
+
+
+.banner__image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-radius: 0.8rem;
+  box-shadow: 0 8px 24px rgba(211, 27, 13, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(211, 27, 13, 0.1);
+}
+
+.banner__image img:hover {
+  transform: scale(1.08) translateY(-6px);
+  box-shadow: 0 12px 36px rgba(211, 27, 13, 0.3);
+}
+
+/* Content Section */
+.banner__content {
+  margin-top: 2rem;
+  text-align: left; /* Aligns text to the left */
+}
+
+.banner__content h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fe25a4;
+  margin-bottom: 1rem;
+}
+
+.banner__content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555; /* Slightly lighter text color */
+  margin-bottom: 1.5rem;
+}
+
+.banner__content p span {
+  font-weight: bold;
+  color: #d83d3d; /* Highlights important text in red */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    padding-top: 75px;
+    margin-top: 1rem;
+  }
+
+  .section__header {
+    margin-top: 1.5rem;
+  }
+
+  .section__header {
+    font-size: 2rem; /* Reduces header size for tablets */
+  }
+
+  .banner__image {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusts grid for smaller screens */
+  }
+
+  .banner__content h4 {
+    font-size: 1.2rem;
+  }
+
+  .banner__content p {
+    font-size: 1rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .banner {
+    padding: 2rem 1rem;
+    padding-top: 75px;
+    margin-top: 1rem;
+  }
+
+  .section__header {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  .banner__image img {
+    max-width: 90%; /* Ensures the image fits smaller screens */
+  }
+
+  .banner__content h4 {
+    font-size: 1rem;
+  }
+
+  .banner__content p {
+    font-size: 0.9rem;
+  }
+}

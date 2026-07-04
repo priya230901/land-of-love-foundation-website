@@ -1,0 +1,225 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #fef3f0 0%, #ffe8dc 25%, #fff5f0 50%, #f0f4ff 75%, #e8f1ff 100%);
+  color: #171717;
+  min-height: 100vh;
+}
+
+/* Footer Styles */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer__col {
+  flex: 1 1 220px;
+  min-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.footer__col h4 {
+  font-size: 1.2rem;
+  font-family: 'title', sans-serif;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: #ff310d;
+}
+
+
+
+@font-face {
+  font-family: 'buttons';
+  src: url('fonts/LTSoul-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'title';
+  src: url('fonts/Pianaforma.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.section__header::after {
+  content: ""; /* Adds a decorative underline */
+  display: block;
+  width: 40%; /* Adjusts the width of the underline */
+  height: 4px; /* Thickness of the underline */
+  background-color: #fe25a4; /* Green color for the underline */
+  margin: 0.5rem auto 0; /* Centers the underline and adds spacing */
+}
+
+/* Banner Section */
+.banner {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 245, 0.95) 100%);
+  padding: 4rem 2rem;
+  padding-top: 76px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(211, 27, 13, 0.12);
+  border-radius: 1.5rem;
+  margin: 2rem auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(211, 27, 13, 0.1);
+}
+
+.banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(211, 27, 13, 0.2);
+}
+
+.section__header {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0414c4;
+  margin-bottom: 1.25rem;
+}
+
+.banner__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.banner__image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner__image img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.16);
+}
+
+.banner__content {
+  margin-top: 2rem;
+  text-align: left; /* Aligns text to the left */
+}
+.banner__content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0414c4;
+  margin-bottom: 1rem;
+}
+
+.banner__content h4 {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #0414c4; /* Slightly lighter text color */
+  margin-bottom: 1.5rem;
+}
+
+.banner__content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #3b3b3b;
+  margin-bottom: 1.5rem;
+}
+
+.banner__content h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0414c4;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    padding-top: 75px;
+    margin-top: 1rem;
+  }
+
+  .section__header {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .banner__image img {
+    max-width: 80%; /* Further reduces image size for tablets */
+  }
+
+  .banner__content h3 {
+    font-size: 1.6rem;
+  }
+
+  .banner__content h4 {
+    font-size: 1rem;
+  }
+
+  .banner__content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .banner {
+    padding: 2rem 1rem;
+    padding-top: 75px;
+    margin-top: 1rem;
+  }
+
+  .section__header {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  .banner__image img {
+    max-width: 90%; /* Ensures the image fits smaller screens */
+  }
+
+  .banner__content h3 {
+    font-size: 1.4rem;
+  }
+
+  .banner__content h4 {
+    font-size: 0.9rem;
+  }
+
+  .banner__content p {
+    font-size: 0.8rem;
+  }
+
+  .banner__content h5 {
+    font-size: 1rem;
+  }
+}

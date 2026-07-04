@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #fef3f0 0%, #ffe8dc 25%, #fff5f0 50%, #f0f4ff 75%, #e8f1ff 100%);
+  color: #171717;
+  min-height: 100vh;
+}
+
+/* Footer Styles */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer__col {
+  flex: 1 1 220px;
+  min-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.footer__col h4 {
+  font-size: 1.2rem;
+  font-family: 'title', sans-serif;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: #ff310d;
+}
+
+
+@font-face {
+  font-family: 'buttons';
+  src: url('fonts/LTSoul-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'title';
+  src: url('fonts/Pianaforma.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Banner Section */
+.banner {
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 245, 0.95) 100%);
+  padding: 4rem 2rem;
+  padding-top: 76px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(211, 27, 13, 0.12);
+  border-radius: 1.5rem;
+  margin: 2rem auto;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(211, 27, 13, 0.1);
+}
+
+.banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(211, 27, 13, 0.2);
+}
+
+.section__header {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0414c4;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section__header::after {
+  content: "";
+  display: block;
+  width: 38%;
+  height: 4px;
+  background-color: #ff0099;
+  margin: 0.75rem auto 0;
+}
+
+.banner__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 1100px;
+  overflow: hidden;
+}
+
+.banner__image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 1.25rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner__image img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.16);
+}
+
+/* Content Section */
+.banner__content {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.banner__content h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ff0099;
+  margin-bottom: 1rem;
+}
+
+.banner h2 {
+  color: #0414c4;
+}
+
+.banner__content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.25rem;
+}
+
+.banner__content p span {
+  font-weight: bold;
+  color: #d83d3d;
+}
+
+/* Scrolling Images Section */
+.scrolling-images {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 2rem auto;
+  box-sizing: border-box;
+}
+
+.scrolling-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+.scrolling-track img {
+  max-width: 180px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 0.5rem;
+  display: block;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    padding-top: 75px;
+    margin-top: 1rem;
+  }
+
+  .section__header {
+    font-size: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .banner__image {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .banner__content h4 {
+    font-size: 1.2rem;
+  }
+
+  .banner__content p {
+    font-size: 1rem;
+  }
+
+  .scrolling-track img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 540px) {
+  .banner {
+    padding: 2rem 1rem;
+    padding-top: 75px;
+    margin-top: 1rem;
+  }
+
+  .section__header {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  .banner__image img {
+    max-width: 90%;
+  }
+
+  .banner__content h4 {
+    font-size: 1rem;
+  }
+
+  .banner__content p {
+    font-size: 0.9rem;
+  }
+
+  .scrolling-track img {
+    max-width: 100px;
+  }
+}

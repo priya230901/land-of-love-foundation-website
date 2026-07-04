@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="magic.css" />
+  <link rel="icon" type="image/png" href="img3/newicon.png" />
+    <title>LAND OF LOVE FOUNDATION NGO</title>
+</head>
+<body>
+      <header class="navbar">
+  <div class="container nav-inner">
+    <a href="./index.html" class="brand">
+      <img src="img3/newlogo.png" alt="Land of Love logo" />
+    </a>
+
+    <nav class="nav-links" id="nav-links">
+       <a href="./index.html"><i class="ri-arrow-right-line" style="color: #ff0000;"></i> Home</a>
+          <a href="./education.html"><i class="ri-arrow-right-line" style="color: #ff0000;"></i> Spoken English Training </a>
+          <a href="./blood.html"><i class="ri-arrow-right-line" style="color: #ff0000;"></i> Blood donation </a>
+          <a href="./empowering.html"><i class="ri-arrow-right-line" style="color: #ff0000;"></i> Placement Guidance </a>
+          <a href="./food.html"><i class="ri-arrow-right-line" style="color: #ff0000;"></i> Food Distribution </a>
+          <a href="./plants.html"><i class="ri-arrow-right-line" style="color: #ff0000;"></i> Eco-Friendly Club </a>
+          <a href="./about.html"><i class="ri-arrow-right-line" style="color: #ff0000;"></i> About Us </a>
+          <a href="./index.html#contact"><i class="ri-arrow-right-line" style="color: #ff0000;"></i> Contact Us</a>
+    </nav>
+
+    <button class="nav-toggle" id="menu-btn" aria-label="Toggle navigation">
+      <i class="ri-menu-3-line"></i>
+    </button>
+  </div>
+</header>
+
+    <header class="banner" id="EDU">
+      <div class="section__container">
+        <h1 class="section__header name" style="font-family: 'title', sans-serif;">
+          MAGIC SHOWS
+        </h1>
+        <h4>🎩 Spreading Smiles with Magic<br>Because everyone deserves a little wonder.</h4>
+        <div class="banner__image scrolling-images">
+          <div class="scrolling-track">
+            <img src="magic/mpic1.jpg" alt="Magic Show 1" />
+            <img src="magic/mpic2.jpg" alt="Magic Show 2" />
+            <img src="magic/mpic3.jpg" alt="Magic Show 3" />
+            <img src="magic/mpic4.jpg" alt="Magic Show 4" />
+            <!-- Duplicate images for seamless scroll -->
+            <img src="magic/mpic1.jpg" alt="Magic Show 1" />
+            <img src="magic/mpic2.jpg" alt="Magic Show 2" />
+            <img src="magic/mpic3.jpg" alt="Magic Show 3" />
+            <img src="magic/mpic4.jpg" alt="Magic Show 4" />
+          </div>
+        </div>
+        <div class="banner__content">
+          <h4>We believe that healing and happiness don’t always come from medicine or money—sometimes, a little magic is all it takes.</h4>
+          <h2 class="name" style="font-family: 'buttons', sans-serif;">Our foundation organizes free magic shows for:</h2>
+          <p>👶 Children in Orphanages</p>
+          <p>👵 Elders in Old-Age Homes</p>
+          <p>🌈 Students in Special Schools</p>
+          <p>These shows are more than just entertainment—they’re moments of joy, laughter, and connection. For children who rarely get to feel like kids, for elders who long for companionship, and for those with special needs, our magic shows are a gift of pure happiness.</p>
+          <h2 class="name" style="font-family: 'buttons', sans-serif;">✨ Why We Do It:</h2>
+          <p>Because in a world full of challenges, creating joyful memories is a form of service too.</p>
+        </div>
+      </div>
+    </header>
+    <!-- Footer Section -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h3 style="color: #ff0000;">Let's Create Impact, Together</h3>
+      <p>Join us in building a kinder, more connected world.</p>
+    </div>
+   
+    <div class="footer-col">
+      <h4>Contact</h4>
+     <p><a href="tel:+918778862175"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +91 87788 62175</a></p>
+          <p><a href="tel:+919677503104"><i class="fa-solid fa-phone" style="color: #ff0000;"></i> +91 96775 03104</a></p>
+          <p><a href="mailto:landoflovefoundation@gmail.com"><i class="fa-solid fa-envelope" style="color: #ff0000;"></i> landoflovefoundation@gmail.com</a></p>
+          <p><i class="fa-solid fa-location-dot" style="color: #ff0000;"></i> Neyveli Registered Office, Vadapalani</p>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <a href="https://www.instagram.com/land_of_love_foundation?igsh=MTNubDQ1OWZicDRzdQ==" target="_blank"><i class="fab fa-instagram" style="color: #C13584;"></i> Instagram</a>
+      <a href="https://wa.me/918778862175" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #25D366;"></i> WhatsApp</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Copyright ©2026. All rights reserved</div>
+</footer>
+
+<script>
+  // Mobile nav menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  menuBtn.addEventListener('click', function() {
+    navLinks.classList.toggle('open');
+  });
+
+  // Infinite horizontal scroll for magic images
+const scrollingImages = document.querySelector('.scrolling-images');
+const scrollingTrack = document.querySelector('.scrolling-track');
+let scrollAmount = 0;
+const scrollSpeed = 0.5; // Adjust for desired speed
+function autoScrollImages() {
+  scrollAmount += scrollSpeed;
+  if (scrollAmount >= scrollingTrack.scrollWidth / 2) {
+    scrollAmount = 0;
+  }
+  scrollingImages.scrollLeft = scrollAmount;
+  requestAnimationFrame(autoScrollImages);
+}
+autoScrollImages();
+</script>
+</body>
+</html>
+
+
+
+
+
+
