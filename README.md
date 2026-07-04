@@ -28,7 +28,7 @@ The **Land of Love Foundation** website was developed as a **freelance project**
 
 ## 🚀 Live Preview
 
-https:www.landoflovefoundation.in
+https://www.landoflovefoundation.in
 
 ## ✨ Features
 
